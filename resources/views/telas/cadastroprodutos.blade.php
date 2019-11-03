@@ -12,8 +12,10 @@
     @section('content')
     <div class="col-md-3 col-xs-3"></div>
     <div class="container col-md-6">
+        <h3 class="text-center">
+            <small class="text-muted">Cadastro de Produtos</small>
+        </h3>
         <div class="card">
-            <div class="card-header text-center">Cadastro de Produtos</div>
             <div class="card-body mx-auto">
                 <form method="POST" action="">
                     <div class="form-row">
@@ -43,7 +45,7 @@
                         <input type="text" class="form-control" id="quantidade" placeholder="Quantidade">
                         </div>
                         <div class="form-group col-md-6">
-                        <label for="entrega">Data da entrega</label>
+                        <label for="entrega">Data de entrega</label>
                         <input type="text" class="form-control" id="entrega" placeholder="DD/MM/AAAA">
                         </div>
                     </div>
