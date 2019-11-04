@@ -40,7 +40,7 @@
                         <img src="images/mesas-icon.jpg" class="card-img-top" alt="...">
                         <div class="card-body">
                         <h5 class="card-title font-weight-bold">Mesas</h5>
-                        <a href="#" class="btn btn-light">Acessar</a>
+                        <a href="{{route('VerMesas')}}" class="btn btn-light">Acessar</a>
                         </div>
                     </div>
                 </div>

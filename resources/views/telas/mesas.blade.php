@@ -13,17 +13,15 @@
     <div class="col-md-2 col-xs-3"></div>
     <div class="container col-md-8">
         <h3 class="text-center">
-            <small class="text-muted">Lista de Produtos</small>
+            <small class="text-muted">Lista de Mesas</small>
         </h3>
         <table class="table table-bordered table-striped table-responsive-xl">
             <thead>
                 <tr>
                 <th scope="col">Código</th>
-                <th scope="col">Nome</th>
-                <th scope="col">Descrição</th>
-                <th scope="col">Preço</th>
-                <th scope="col">Quantidade</th>
-                <th scope="col">Data de Entrega</th>
+                <th scope="col">Capacidade</th>
+                <th scope="col">Status</th>
+                <th scope="col">Mesas mescladas</th>
                 </tr>
             </thead>
             <tbody>
@@ -32,21 +30,17 @@
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td></td>
                 </tr>
+
                 <tr>
                 <th scope="row">2</th>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td></td>
-                <td></td>
                 </tr>
+
                 <tr>
                 <th scope="row">3</th>
-                <td></td>
-                <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -54,7 +48,7 @@
             </tbody>
         </table>
         <div class="d-flex justify-content-center">
-            <a href="{{route('CadastroProdutos')}}" class="btn btn-primary mr-1">Cadastrar Produtos</a>
+            <a href="{{route('CadastroMesas')}}" class="btn btn-primary mr-1">Cadastrar Mesa</a>
             <a href="{{route('ViewGerente')}}" class="btn btn-primary">Voltar</a>
         </div>
     </div>

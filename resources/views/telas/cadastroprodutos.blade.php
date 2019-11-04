@@ -50,6 +50,7 @@
                         </div>
                     </div>
                     <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    <a href="{{route('VerProdutos')}}" class="btn btn-primary">Voltar</a>
                 </form>
             </div>
         </div>
