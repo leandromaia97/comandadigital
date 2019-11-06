@@ -15,7 +15,7 @@
         <h3 class="text-center">
             <small class="text-muted">Cadastro de Mesas</small>
         </h3>
-        <div class="card">
+        <div class="card shadow-sm p-3 mb-5 bg-white rounded">
             <div class="card-body mx-auto">
                 <form method="POST" action="">
                     <div class="form-row">

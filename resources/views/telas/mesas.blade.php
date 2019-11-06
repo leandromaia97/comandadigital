@@ -15,7 +15,7 @@
         <h3 class="text-center">
             <small class="text-muted">Lista de Mesas</small>
         </h3>
-        <table class="table table-bordered table-striped table-responsive-xl">
+        <table class="table table-bordered table-striped table-responsive-xl shadow-sm p-3 mb-5 bg-white rounded">
             <thead>
                 <tr>
                 <th scope="col">Código</th>

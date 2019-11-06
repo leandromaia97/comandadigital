@@ -15,15 +15,15 @@
         <h3 class="text-center">
             <small class="text-muted">Cadastro de Produtos</small>
         </h3>
-        <div class="card">
+        <div class="card shadow-sm p-3 mb-5 bg-white rounded">
             <div class="card-body mx-auto">
                 <form method="POST" action="">
                     <div class="form-row">
-                        <div class="form-group col-md-4">
+                        <div class="form-group col-md-5">
                         <label for="codigo">Código</label>
                         <input type="text" class="form-control" id="codigo" placeholder="Código">
                         </div>
-                        <div class="form-group col-md-8">
+                        <div class="form-group col-md-7">
                         <label for="nome">Nome</label>
                         <input type="text" class="form-control" id="nome" placeholder="Nome">
                         </div>
