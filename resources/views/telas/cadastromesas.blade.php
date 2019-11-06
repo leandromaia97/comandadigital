@@ -10,8 +10,8 @@
 </head>
 <body>
     @section('content')
-    <div class="col-md-3 col-xs-3"></div>
-    <div class="container col-md-6">
+    <div class="col-md-4 col-xs-3"></div>
+    <div class="container col-md-4">
         <h3 class="text-center">
             <small class="text-muted">Cadastro de Mesas</small>
         </h3>
@@ -19,11 +19,11 @@
             <div class="card-body mx-auto">
                 <form method="POST" action="">
                     <div class="form-row">
-                        <div class="form-group col-md-6">
+                        <div class="form-group col-md-7">
                             <label for="codigo">Código</label>
                             <input type="text" class="form-control" id="codigo" placeholder="Código">
                         </div>
-                        <div class="form-group col-md-4">
+                        <div class="form-group col-md-5">
                                 <label for="capacidade">Capacidade</label>
                                 <input type="text" class="form-control" id="capacidade" placeholder="Capacidade">
                         </div>
@@ -40,7 +40,7 @@
                               <option value="Sem condições de utilização">Sem condições de utilização</option>
                             </select>
                         </div>
-                        <div class="form-group col-md-6">
+                        <div class="form-group col-md-12">
                             <label for="comment">Mesas mescladas</label>
                             <textarea class="form-control" rows="5" id="comment" placeholder="Descreva as mesas que foram unidas"></textarea>
                         </div>
@@ -51,7 +51,7 @@
             </div>
         </div>
     </div>
-   <div class="col-md-3 col-xs-3"></div>
+   <div class="col-md-4 col-xs-3"></div>
     @endsection
 </body>
 </html>
