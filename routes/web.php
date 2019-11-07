@@ -22,3 +22,5 @@ Route::get('/produtos', 'GerenteController@VerProdutos')->name('VerProdutos');
 Route::get('/produtos/cadastro', 'GerenteController@CadastrarProduto')->name('CadastroProdutos');
 Route::get('/mesas', 'GerenteController@VerMesas')->name('VerMesas');
 Route::get('/mesas/cadastro', 'GerenteController@CadastrarMesa')->name('CadastroMesas');
+Route::get('/cozinha/cadastro', 'GerenteController@CadastrarCozinha')->name('CadastroCozinha');
+Route::get('/garcom/cadastro', 'GerenteController@CadastrarGarcom')->name('CadastroGarcom');

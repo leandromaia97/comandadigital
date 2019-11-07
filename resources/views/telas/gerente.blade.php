@@ -51,7 +51,7 @@
                         <img src="images/cozinha-icon.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title font-weight-bold">Cozinha</h5>
-                            <a href="#" class="btn btn-light">Acessar</a>
+                            <a href="{{route('CadastroCozinha')}}" class="btn btn-light">Acessar</a>
                         </div>
                     </div>
                 </div>

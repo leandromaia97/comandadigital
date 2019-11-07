@@ -25,4 +25,12 @@ class GerenteController extends Controller
     public function CadastrarMesa(){
         return view('telas.cadastromesas');
     }
+
+    public function CadastrarCozinha(){
+        return view('telas.cadastrocozinha');
+    }
+
+    public function CadastrarGarcom(){
+        return view('telas.cadastrogarcom');
+    }
 };
