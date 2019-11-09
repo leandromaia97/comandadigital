@@ -20,29 +20,25 @@
                 <form method="POST" action="">
                     <div class="form-row">
                         <div class="form-group col-md-5">
-                            <label for="codigo">CPF</label>
-                            <input type="text" class="form-control" id="codigo" placeholder="CPF">
+                            <label for="cpf">CPF</label>
+                            <input type="text" class="form-control" id="cpf" placeholder="CPF">
                         </div>
                         <div class="form-group col-md-7">
-                            <label for="nome">RG</label>
-                            <input type="text" class="form-control" id="nome" placeholder="RG">
+                            <label for="rg">RG</label>
+                            <input type="text" class="form-control" id="rg" placeholder="RG">
                         </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-5">
-                            <label for="nome">ID do Garçom</label>
-                            <input type="text" class="form-control" id="nome" placeholder="ID Garçom">
+                            <label for="idgarcom">ID do Garçom</label>
+                            <input type="text" class="form-control" id="idgarcom" placeholder="ID do garçom">
                         </div>
                         <div class="form-group col-md-7">
-                            <label for="entrega">Nome Completo</label>
-                            <input type="text" class="form-control" id="entrega" placeholder="Nome completo">
+                            <label for="nomesobrenome">Nome e Sobrenome</label>
+                            <input type="text" class="form-control" id="nomesobrenome" placeholder="Nome e sobrenome">
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    <a href="" class="btn btn-primary">Cadastrar</a>
                     <a href="{{route('ViewGerente')}}" class="btn btn-primary">Voltar</a>
                 </form>
             </div>

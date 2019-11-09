@@ -45,7 +45,7 @@
                             <textarea class="form-control" rows="5" id="comment" placeholder="Descreva as mesas que foram unidas"></textarea>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    <a href="" class="btn btn-primary">Cadastrar</a>
                     <a href="{{route('VerMesas')}}" class="btn btn-primary">Voltar</a>
                 </form>
             </div>

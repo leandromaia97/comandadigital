@@ -20,12 +20,12 @@
                 <form method="POST" action="">
                     <div class="form-row">
                         <div class="form-group col-md-5">
-                        <label for="codigo">Código</label>
-                        <input type="text" class="form-control" id="codigo" placeholder="Código">
+                            <label for="codigo">Código</label>
+                            <input type="text" class="form-control" id="codigo" placeholder="Código">
                         </div>
                         <div class="form-group col-md-7">
-                        <label for="nome">Nome</label>
-                        <input type="text" class="form-control" id="nome" placeholder="Nome">
+                            <label for="nome">Nome</label>
+                            <input type="text" class="form-control" id="nome" placeholder="Nome">
                         </div>
                     </div>
                     <div class="form-group">
@@ -41,15 +41,15 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-4">
-                        <label for="quantidade">Quantidade</label>
-                        <input type="text" class="form-control" id="quantidade" placeholder="Quantidade">
+                            <label for="quantidade">Quantidade</label>
+                            <input type="text" class="form-control" id="quantidade" placeholder="Quantidade">
                         </div>
                         <div class="form-group col-md-6">
-                        <label for="entrega">Data de entrega</label>
-                        <input type="text" class="form-control" id="entrega" placeholder="DD/MM/AAAA">
+                            <label for="entrega">Data de entrega</label>
+                            <input type="text" class="form-control" id="entrega" placeholder="DD/MM/AAAA">
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    <a href="" class="btn btn-primary">Cadastrar</a>
                     <a href="{{route('VerProdutos')}}" class="btn btn-primary">Voltar</a>
                 </form>
             </div>
