@@ -39,7 +39,7 @@
                         </div>
                     </div>
                     <a href="" class="btn btn-primary">Cadastrar</a>
-                    <a href="{{route('ViewGerente')}}" class="btn btn-primary">Voltar</a>
+                    <a href="{{route('VerGarcons')}}" class="btn btn-primary">Voltar</a>
                 </form>
             </div>
         </div>

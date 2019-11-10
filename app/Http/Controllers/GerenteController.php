@@ -33,4 +33,16 @@ class GerenteController extends Controller
     public function CadastrarGarcom(){
         return view('telas.cadastrogarcom');
     }
+
+    public function VerGarcons(){
+        return view('telas.garcom');
+    }
+
+    public function CadastrarPedidos(){
+        return view('telas.cadastropedidos');
+    }
+
+    public function VerPedidos(){
+        return view('telas.pedidos');
+    }
 };

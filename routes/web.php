@@ -24,3 +24,6 @@ Route::get('/mesas', 'GerenteController@VerMesas')->name('VerMesas');
 Route::get('/mesas/cadastro', 'GerenteController@CadastrarMesa')->name('CadastroMesas');
 Route::get('/cozinha/cadastro', 'GerenteController@CadastrarCozinha')->name('CadastroCozinha');
 Route::get('/garcom/cadastro', 'GerenteController@CadastrarGarcom')->name('CadastroGarcom');
+Route::get('/garcom', 'GerenteController@VerGarcons')->name('VerGarcons');
+Route::get('/pedidos/cadastro', 'GerenteController@CadastrarPedidos')->name('CadastroPedidos');
+Route::get('/pedidos', 'GerenteController@VerPedidos')->name('VerPedidos');

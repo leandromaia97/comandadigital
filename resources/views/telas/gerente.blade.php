@@ -21,7 +21,7 @@
                         <img src="images/pedidos-icon.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title font-weight-bold">Pedidos</h5>
-                            <a href="#" class="btn btn-light">Acessar</a>
+                            <a href="{{route('VerPedidos')}}" class="btn btn-light">Acessar</a>
                         </div>
                     </div>
                 </div>
@@ -71,7 +71,7 @@
                         <img src="images/garcom-icon.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title font-weight-bold">Garçom</h5>
-                            <a href="#" class="btn btn-light">Acessar</a>
+                            <a href="{{route('VerGarcons')}}" class="btn btn-light">Acessar</a>
                         </div>
                     </div>
                 </div>
