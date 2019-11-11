@@ -21,26 +21,51 @@
                     <div class="form-row">
                         <div class="form-group col-md-5">
                             <label for="numeromesa">Número da Mesa</label>
-                            <input type="text" class="form-control" id="numeromesa" placeholder="Mesa 01">
+                            <input type="text" class="form-control @error('numeromesa') is-invalid @enderror" id="numeromesa" placeholder="Mesa 01">
+                            @error('numeromesa')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
                         <div class="form-group col-md-7">
-                            <label for="nome">Nome do Cliente</label>
-                            <input type="text" class="form-control" id="nome" placeholder="Nome do cliente">
+                            <label for="nomecliente">Nome do Cliente</label>
+                            <input type="text" class="form-control @error('nomecliente') is-invalid @enderror" id="nomecliente" placeholder="Nome do cliente">
+                            @error('nomecliente')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-12">
-                            <label for="comida">Comidas</label>
-                            <textarea class="form-control" rows="5" id="comida" placeholder="Itens:"></textarea>
+                            <label for="comidas">Comidas</label>
+                            <textarea class="form-control @error('comidas') is-invalid @enderror" rows="5" id="comidas" placeholder="Itens:"></textarea>
+                            @error('comidas')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
                         <div class="form-group col-md-12">
-                            <label for="bebida">Bebidas</label>
-                            <textarea class="form-control" rows="5" id="bebida" placeholder="Itens:"></textarea>
+                            <label for="bebidas">Bebidas</label>
+                            <textarea class="form-control @error('bebidas') is-invalid @enderror" rows="5" id="bebidas" placeholder="Itens:"></textarea>
+                            @error('bebidas')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="observacao">Observações</label>
-                        <textarea class="form-control" rows="3" id="observacao" placeholder="Observações"></textarea>
+                        <textarea class="form-control @error('observacoes') is-invalid @enderror" rows="3" id="observacao" placeholder="Observações"></textarea>
+                        @error('observacoes')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
                     </div>
                     <a href="" class="btn btn-primary">Cadastrar</a>
                     <a href="{{route('VerPedidos')}}" class="btn btn-primary">Voltar</a>

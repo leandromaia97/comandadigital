@@ -20,33 +20,63 @@
                 <form method="POST" action="">
                     <div class="form-row">
                         <div class="form-group col-md-5">
-                            <label for="codigo">Código</label>
-                            <input type="text" class="form-control" id="codigo" placeholder="Código">
+                            <label for="codigoproduto">Código</label>
+                            <input type="text" class="form-control @error('codigoproduto') is-invalid @enderror" id="codigoproduto" placeholder="Código">
+                            @error('codigoproduto')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
                         <div class="form-group col-md-7">
-                            <label for="nome">Nome</label>
-                            <input type="text" class="form-control" id="nome" placeholder="Nome">
+                            <label for="nomeproduto">Nome</label>
+                            <input type="text" class="form-control @error('nomeproduto') is-invalid @enderror" id="nomeproduto" placeholder="Nome">
+                            @error('nomeproduto')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="descricao">Descrição</label>
-                        <textarea class="form-control" rows="5" id="descricao" placeholder="Descrição do produto"></textarea>
+                        <label for="descricaoproduto">Descrição</label>
+                        <textarea class="form-control @error('descricaoproduto') is-invalid @enderror" rows="5" id="descricaoproduto" placeholder="Descrição do produto"></textarea>
+                        @error('descricaoproduto')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
                     </div>
                     <div class="form-group">
-                        <label for="preco">Preço</label>
+                        <label for="precoproduto">Preço</label>
                         <div class="input-group-prepend">
                             <span class="input-group-text">R$</span>
-                            <input type="text" class="form-control col-md-4" id="preco" aria-label="Preço" placeholder="0,00">
+                            <input type="text" class="form-control @error('precoproduto') is-invalid @enderror col-md-4" id="precoproduto" aria-label="Preço" placeholder="0,00">
                         </div>
+                        @error('precoproduto')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-4">
-                            <label for="quantidade">Quantidade</label>
-                            <input type="text" class="form-control" id="quantidade" placeholder="Quantidade">
+                            <label for="quantidadeproduto">Quantidade</label>
+                            <input type="text" class="form-control @error('quantidadeproduto') is-invalid @enderror" id="quantidadeproduto" placeholder="Quantidade">
+                            @error('quantidadeproduto')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="entrega">Data de entrega</label>
-                            <input type="text" class="form-control" id="entrega" placeholder="DD/MM/AAAA">
+                            <label for="entregaproduto">Data de entrega</label>
+                            <input type="text" class="form-control @error('entregaproduto') is-invalid @enderror" id="entregaproduto" placeholder="DD/MM/AAAA">
+                            @error('entregaproduto')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
                     </div>
                     <a href="" class="btn btn-primary">Cadastrar</a>

@@ -21,21 +21,41 @@
                     <div class="form-row">
                         <div class="form-group col-md-5">
                             <label for="cpf">CPF</label>
-                            <input type="text" class="form-control" id="cpf" placeholder="CPF">
+                            <input type="text" class="form-control @error('cpf') is-invalid @enderror" id="cpf" placeholder="CPF">
+                            @error('cpf')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
                         <div class="form-group col-md-7">
                             <label for="rg">RG</label>
-                            <input type="text" class="form-control" id="rg" placeholder="RG">
+                            <input type="text" class="form-control @error('rg') is-invalid @enderror" id="rg" placeholder="RG">
+                            @error('rg')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-5">
                             <label for="idgarcom">ID do Garçom</label>
-                            <input type="text" class="form-control" id="idgarcom" placeholder="ID do garçom">
+                            <input type="text" class="form-control @error('idgarcom') is-invalid @enderror" id="idgarcom" placeholder="ID do garçom">
+                            @error('idgarcom')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
                         <div class="form-group col-md-7">
-                            <label for="nomesobrenome">Nome e Sobrenome</label>
-                            <input type="text" class="form-control" id="nomesobrenome" placeholder="Nome e sobrenome">
+                            <label for="nomegarcom">Nome e Sobrenome</label>
+                            <input type="text" class="form-control @error('nomegarcom') is-invalid @enderror" id="nomegarcom" placeholder="Nome e sobrenome">
+                            @error('nomegarcom')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
                         </div>
                     </div>
                     <a href="" class="btn btn-primary">Cadastrar</a>
