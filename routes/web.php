@@ -17,13 +17,13 @@ Route::get('/', function () {
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/gerente', 'GerenteController@MostrarViewGerente')->name('ViewGerente');
-Route::get('/produtos', 'GerenteController@VerProdutos')->name('VerProdutos');
-Route::get('/produtos/cadastro', 'GerenteController@CadastrarProduto')->name('CadastroProdutos');
-Route::get('/mesas', 'GerenteController@VerMesas')->name('VerMesas');
-Route::get('/mesas/cadastro', 'GerenteController@CadastrarMesa')->name('CadastroMesas');
-Route::get('/cozinha/cadastro', 'GerenteController@CadastrarCozinha')->name('CadastroCozinha');
-Route::get('/garcom/cadastro', 'GerenteController@CadastrarGarcom')->name('CadastroGarcom');
-Route::get('/garcom', 'GerenteController@VerGarcons')->name('VerGarcons');
-Route::get('/pedidos/cadastro', 'GerenteController@CadastrarPedidos')->name('CadastroPedidos');
-Route::get('/pedidos', 'GerenteController@VerPedidos')->name('VerPedidos');
+Route::get('/gerente', 'ViewGerenteController@MostrarViewGerente')->name('ViewGerente');
+Route::get('/produtos', 'ViewGerenteController@VerProdutos')->name('VerProdutos');
+Route::get('/produtos/cadastro', 'ViewGerenteController@CadastrarProduto')->name('CadastroProdutos');
+Route::get('/mesas', 'ViewGerenteController@VerMesas')->name('VerMesas');
+Route::get('/mesas/cadastro', 'ViewGerenteController@CadastrarMesa')->name('CadastroMesas');
+Route::get('/cozinha/cadastro', 'ViewGerenteController@CadastrarCozinha')->name('CadastroCozinha');
+Route::get('/garcom/cadastro', 'ViewGerenteController@CadastrarGarcom')->name('CadastroGarcom');
+Route::get('/garcom', 'ViewGerenteController@VerGarcons')->name('VerGarcons');
+Route::get('/pedidos/cadastro', 'ViewGerenteController@CadastrarPedidos')->name('CadastroPedidos');
+Route::get('/pedidos', 'ViewGerenteController@VerPedidos')->name('VerPedidos');

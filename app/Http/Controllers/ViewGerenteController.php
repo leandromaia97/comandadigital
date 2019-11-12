@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class GerenteController extends Controller
+class ViewGerenteController extends Controller
 {
     public function MostrarViewGerente(){
         return view('telas.gerente');
@@ -40,9 +40,11 @@ class GerenteController extends Controller
 
     public function CadastrarPedidos(){
         return view('telas.cadastropedidos');
+
+        $validacao = $request->validacao();
     }
 
     public function VerPedidos(){
         return view('telas.pedidos');
     }
-};
+}
