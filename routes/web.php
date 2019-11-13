@@ -27,3 +27,7 @@ Route::get('/garcom/cadastro', 'GarcomController@create')->name('CadastroGarcom'
 Route::get('/garcom', 'GarcomController@index')->name('VerGarcons');
 Route::get('/pedidos/cadastro', 'PedidosController@create')->name('CadastroPedidos');
 Route::get('/pedidos', 'PedidosController@index')->name('VerPedidos');
+
+//Rotas para salvar dados
+Route::post('salvarpedido', 'PedidosController@store')->name('SalvarPedido');
+Route::post('salvarmesa', 'MesasController@store')->name('SalvarMesa');

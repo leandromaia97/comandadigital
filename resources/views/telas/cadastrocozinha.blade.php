@@ -18,6 +18,7 @@
         <div class="card shadow-sm p-3 mb-5 bg-white rounded">
             <div class="card-body">
                 <form method="POST" action="">
+                @csrf
                     <div class="form-row">               
                         <div class="form-group col-md-5">
                             <label for="codigocozinha">Código</label>

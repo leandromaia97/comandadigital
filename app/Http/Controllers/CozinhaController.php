@@ -34,7 +34,17 @@ class CozinhaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validacao = $request->validate([
+            'codigocozinha' => 'required',
+            'descricaocozinha' => 'required',
+        ]);
+
+        $cozinha = new Cozinha;
+        $cozinha->codigocozinha = $request->codigocozinha;
+        $cozinha->descricaocozinha = $request->descricaocozinha;
+        
+        $cozinha->save();
+        
     }
 
     /**

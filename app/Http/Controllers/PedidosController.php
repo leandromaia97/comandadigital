@@ -34,7 +34,22 @@ class PedidosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validacao = $request->validate([
+            'numeromesa' => 'required',
+            'nomecliente' => 'required',
+            'comidas' => 'required',
+            'bebidas' => 'required',
+        ]);
+
+        $pedido = new Pedido;
+        $pedido->numeromesa = $request->numeromesa;
+        $pedido->nomecliente = $request->nomecliente;
+        $pedido->comidas = $request->comidas;
+        $pedido->bebidas = $request->bebidas;
+        $pedido->observacoes = $request->observacoes;
+        
+        $pedido->save();
+        
     }
 
     /**

@@ -17,7 +17,8 @@
         </h3>
         <div class="card shadow-sm p-3 mb-5 bg-white rounded">
             <div class="card-body mx-auto">
-                <form method="POST" action="">
+                <form method="POST" action="{{route('SalvarMesa')}}">
+                @csrf
                     <div class="form-row">
                         <div class="form-group col-md-7">
                             <label for="codigomesa">Código</label>
@@ -65,7 +66,7 @@
                             @enderror
                         </div>
                     </div>
-                    <a href="" class="btn btn-primary">Cadastrar</a>
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
                     <a href="{{route('VerMesas')}}" class="btn btn-primary">Voltar</a>
                 </form>
             </div>

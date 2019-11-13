@@ -131,6 +131,18 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+
+        'numeromesa' =>[
+            'required' => 'O campo numero da mesa é obrigatório'
+        ],
+
+        'nomecliente' => [
+            'required' => 'O campo nome do cliente é obrigatório'
+        ],
+
+        'codigomesa' => [
+            'required' => 'O campo código da mesa é obrigatório'
+        ],
     ],
 
     /*

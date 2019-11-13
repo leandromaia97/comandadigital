@@ -34,7 +34,20 @@ class MesasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validacao = $request->validate([
+            'codigomesa' => 'required',
+            'capacidade' => 'required',
+            'status' => 'required',
+        ]);
+
+        $mesa = new Mesa;
+        $mesa->codigomesa = $request->codigomesa;
+        $mesa->capacidade = $request->capacidade;
+        $mesa->status = $request->status;
+        $mesa->mesasmescladas = $request->mesasmescladas;
+        
+        $mesa->save();
+        
     }
 
     /**
