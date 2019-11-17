@@ -17,7 +17,8 @@
         </h3>
         <div class="card shadow-sm p-3 mb-5 bg-white rounded">
             <div class="card-body mx-auto">
-                <form method="POST" action="">
+                <form method="POST" action="{{route('SalvarProduto')}}">
+                @csrf
                     <div class="form-row">
                         <div class="form-group col-md-5">
                             <label for="codigoproduto">Código</label>
@@ -51,13 +52,13 @@
                         <label for="precoproduto">Preço</label>
                         <div class="input-group-prepend">
                             <span class="input-group-text">R$</span>
-                            <input type="text" class="form-control @error('precoproduto') is-invalid @enderror col-md-4" id="precoproduto" aria-label="Preço" placeholder="0,00">
-                        </div>
-                        @error('precoproduto')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
+                            <input type="text" class="form-control @error('precoproduto') is-invalid @enderror col-md-4" id="precoproduto" aria-label="Preço" placeholder="0,00">&nbsp
+                            @error('precoproduto')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div> 
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-4">
@@ -79,7 +80,7 @@
                             @enderror
                         </div>
                     </div>
-                    <a href="" class="btn btn-primary">Cadastrar</a>
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
                     <a href="{{route('VerProdutos')}}" class="btn btn-primary">Voltar</a>
                 </form>
             </div>

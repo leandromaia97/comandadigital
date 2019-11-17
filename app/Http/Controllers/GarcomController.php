@@ -34,7 +34,20 @@ class GarcomController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validacao = $request->validate([
+            'cpf' => 'required',
+            'rg' => 'required',
+            'idgarcom' => 'required',
+            'nomegarcom' => 'required',
+        ]);
+
+        $garcom = new Garcom;
+        $garcom->cpf = $request->cpf;
+        $garcom->rg = $request->rg;
+        $garcom->id = $request->idgarcom;
+        $garcom->nome = $request->nomegarcom;
+        
+        $garcom->save();
     }
 
     /**

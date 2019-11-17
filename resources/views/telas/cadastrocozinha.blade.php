@@ -17,7 +17,7 @@
         </h3>
         <div class="card shadow-sm p-3 mb-5 bg-white rounded">
             <div class="card-body">
-                <form method="POST" action="">
+                <form method="POST" action="{{route('SalvarCozinha')}}">
                 @csrf
                     <div class="form-row">               
                         <div class="form-group col-md-5">
@@ -39,7 +39,7 @@
                             </span>
                         @enderror
                     </div>
-                    <a href="" class="btn btn-primary">Cadastrar</a>
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
                     <a href="{{route('ViewGerente')}}" class="btn btn-primary">Voltar</a>
                 </form>
             </div>

@@ -31,3 +31,6 @@ Route::get('/pedidos', 'PedidosController@index')->name('VerPedidos');
 //Rotas para salvar dados
 Route::post('salvarpedido', 'PedidosController@store')->name('SalvarPedido');
 Route::post('salvarmesa', 'MesasController@store')->name('SalvarMesa');
+Route::post('salvarcozinha', 'CozinhaController@store')->name('SalvarCozinha');
+Route::post('salvarproduto', 'ProdutosController@store')->name('SalvarProduto');
+Route::post('salvargarcom', 'GarcomController@store')->name('SalvarGarcom');

@@ -143,6 +143,46 @@ return [
         'codigomesa' => [
             'required' => 'O campo código da mesa é obrigatório'
         ],
+
+        'codigocozinha' => [
+            'required' => 'O campo código da cozinha é obrigatório'
+        ],
+
+        'descricaocozinha' => [
+            'required' => 'O campo descrição da cozinha é obrigatório'
+        ],
+
+        'codigoproduto' => [
+            'required' => 'O campo código é obrigatório',
+        ],
+
+        'nomeproduto' =>[
+            'required' => 'O campo nome é obrigatório'
+        ],
+
+        'descricaoproduto' => [
+            'required' => 'O campo descrição do produto é obrigatório'
+        ],
+
+        'precoproduto' => [
+            'required' => 'O campo preço é obrigatório'
+        ],
+
+        'quantidadeproduto' => [
+            'required' => 'O campo quantidade é obrigatório'
+        ],
+
+        'entregaproduto' => [
+            'required' => 'O campo data de entrega é obrigatório'
+        ],
+
+        'idgarcom' => [
+            'required' => 'O campo id do garçom é obrigatório'
+        ],
+
+        'nomegarcom' => [
+            'required' => 'O campo nome e sobrenome é obrigatório'
+        ],
     ],
 
     /*

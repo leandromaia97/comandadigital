@@ -34,7 +34,24 @@ class ProdutosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validacao = $request->validate([
+            'codigoproduto' => 'required',
+            'nomeproduto' => 'required',
+            'descricaoproduto' => 'required',
+            'precoproduto' => 'required',
+            'quantidadeproduto' =>'required',
+            'entregaproduto' => 'required',
+        ]);
+
+        $produto = new Produto;
+        $produto->codigo = $request->codigoproduto;
+        $produto->nome = $request->nomeproduto;
+        $produto->descricao = $request->descricaoproduto;
+        $produto->preco = $request->precoproduto;
+        $produto->quantidade = $request->quantidadeproduto;
+        $produto->entrega = $request->entregaproduto;
+        
+        $produto->save();
     }
 
     /**
