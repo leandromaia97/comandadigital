@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/novousuario', function(){
+    return view('telas.usuariocadastrado');
+});
+
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/gerente', 'GerenteController@ViewGerente')->name('ViewGerente');

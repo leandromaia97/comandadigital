@@ -1,4 +1,4 @@
-@extends('layouts.inicial')
+@extends('layouts.app')
 @section('title', 'Page Title')
 <!DOCTYPE html>
 <html lang="pt-br">
