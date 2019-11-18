@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Model\Pedidos;
 
 class PedidosController extends Controller
 {
@@ -41,14 +42,14 @@ class PedidosController extends Controller
             'bebidas' => 'required',
         ]);
 
-        $pedido = new Pedido;
-        $pedido->numeromesa = $request->numeromesa;
-        $pedido->nomecliente = $request->nomecliente;
-        $pedido->comidas = $request->comidas;
-        $pedido->bebidas = $request->bebidas;
-        $pedido->observacoes = $request->observacoes;
+        $pedidos = new Pedidos;
+        $pedidos->numeromesa = $request->numeromesa;
+        $pedidos->nomecliente = $request->nomecliente;
+        $pedidos->comidas = $request->comidas;
+        $pedidos->bebidas = $request->bebidas;
+        $pedidos->observacoes = $request->observacoes;
         
-        $pedido->save();
+        $pedidos->save();
         
     }
 
