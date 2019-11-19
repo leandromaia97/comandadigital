@@ -43,11 +43,14 @@ class PedidosController extends Controller
         ]);
 
         $pedidos = new Pedidos;
-        $pedidos->numeromesa = $request->numeromesa;
-        $pedidos->nomecliente = $request->nomecliente;
+
+        // dd($request);
+        $pedidos->numero_mesa = $request->numeromesa;
+        $pedidos->nome_cliente = $request->nomecliente;
         $pedidos->comidas = $request->comidas;
         $pedidos->bebidas = $request->bebidas;
         $pedidos->observacoes = $request->observacoes;
+        $pedidos->status = 0;
         
         $pedidos->save();
         

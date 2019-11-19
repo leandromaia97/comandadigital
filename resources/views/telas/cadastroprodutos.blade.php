@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width= initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cadastro de Produtos</title>
+    <title>Cadastro de Produtos - ComandaDigital</title>
 </head>
 <body>
     @section('content')
@@ -22,7 +22,7 @@
                     <div class="form-row">
                         <div class="form-group col-md-5">
                             <label for="codigoproduto">Código</label>
-                            <input type="text" class="form-control @error('codigoproduto') is-invalid @enderror" id="codigoproduto" placeholder="Código">
+                            <input type="text" name="codigoproduto" class="form-control @error('codigoproduto') is-invalid @enderror" id="codigoproduto" placeholder="Código">
                             @error('codigoproduto')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -31,7 +31,7 @@
                         </div>
                         <div class="form-group col-md-7">
                             <label for="nomeproduto">Nome</label>
-                            <input type="text" class="form-control @error('nomeproduto') is-invalid @enderror" id="nomeproduto" placeholder="Nome">
+                            <input type="text" name="nomeproduto" class="form-control @error('nomeproduto') is-invalid @enderror" id="nomeproduto" placeholder="Nome">
                             @error('nomeproduto')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -41,7 +41,7 @@
                     </div>
                     <div class="form-group">
                         <label for="descricaoproduto">Descrição</label>
-                        <textarea class="form-control @error('descricaoproduto') is-invalid @enderror" rows="5" id="descricaoproduto" placeholder="Descrição do produto"></textarea>
+                        <textarea name="descricaoproduto" class="form-control @error('descricaoproduto') is-invalid @enderror" rows="5" id="descricaoproduto" placeholder="Descrição do produto"></textarea>
                         @error('descricaoproduto')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -52,7 +52,7 @@
                         <label for="precoproduto">Preço</label>
                         <div class="input-group-prepend">
                             <span class="input-group-text">R$</span>
-                            <input type="text" class="form-control @error('precoproduto') is-invalid @enderror col-md-4" id="precoproduto" aria-label="Preço" placeholder="0,00">&nbsp
+                            <input type="text" name="precoproduto" class="form-control @error('precoproduto') is-invalid @enderror col-md-4" id="precoproduto" aria-label="Preço" placeholder="0,00">&nbsp
                             @error('precoproduto')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -63,7 +63,7 @@
                     <div class="form-row">
                         <div class="form-group col-md-4">
                             <label for="quantidadeproduto">Quantidade</label>
-                            <input type="text" class="form-control @error('quantidadeproduto') is-invalid @enderror" id="quantidadeproduto" placeholder="Quantidade">
+                            <input type="text" name="quantidadeproduto" class="form-control @error('quantidadeproduto') is-invalid @enderror" id="quantidadeproduto" placeholder="Quantidade">
                             @error('quantidadeproduto')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -72,7 +72,7 @@
                         </div>
                         <div class="form-group col-md-6">
                             <label for="entregaproduto">Data de entrega</label>
-                            <input type="text" class="form-control @error('entregaproduto') is-invalid @enderror" id="entregaproduto" placeholder="DD/MM/AAAA">
+                            <input type="text" name="entregaproduto" class="form-control @error('entregaproduto') is-invalid @enderror" id="entregaproduto" placeholder="DD/MM/AAAA">
                             @error('entregaproduto')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>

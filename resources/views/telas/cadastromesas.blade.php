@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width= initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cadastro de Mesas</title>
+    <title>Cadastro de Mesas - ComandaDigital</title>
 </head>
 <body>
     @section('content')
@@ -22,7 +22,7 @@
                     <div class="form-row">
                         <div class="form-group col-md-7">
                             <label for="codigomesa">Código</label>
-                            <input type="text" class="form-control @error('codigomesa') is-invalid @enderror" id="codigomesa" placeholder="Código">
+                            <input type="text" name="codigomesa" class="form-control @error('codigomesa') is-invalid @enderror" id="codigomesa" placeholder="Código">
                             @error('codigomesa')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -31,7 +31,7 @@
                         </div>
                         <div class="form-group col-md-5">
                             <label for="capacidade">Capacidade</label>
-                            <input type="text" class="form-control @error('capacidade') is-invalid @enderror" id="capacidade" placeholder="Capacidade">
+                            <input type="text" name="capacidade" class="form-control @error('capacidade') is-invalid @enderror" id="capacidade" placeholder="Capacidade">
                             @error('capacidade')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -42,7 +42,7 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="status">Status</label>
-                            <select class="form-control @error('status') is-invalid @enderror" id="status">
+                            <select name="status" class="form-control @error('status') is-invalid @enderror" id="status">
                               <option value="">Selecionar</option>
                               <option value="Livre">Livre</option>
                               <option value="Ocupada">Ocupada</option>
@@ -58,7 +58,7 @@
                         </div>
                         <div class="form-group col-md-12">
                             <label for="mesasmescladas">Mesas mescladas</label>
-                            <textarea class="form-control @error('mesasmescladas') is-invalid @enderror" rows="5" id="mesasmescladas" placeholder="Descreva as mesas que foram unidas"></textarea>
+                            <textarea name="mesasmescladas" class="form-control @error('mesasmescladas') is-invalid @enderror" rows="5" id="mesasmescladas" placeholder="Descreva as mesas que foram unidas"></textarea>
                             @error('mesasmescladas')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>

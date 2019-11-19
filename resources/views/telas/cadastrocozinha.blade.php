@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width= initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Cadastro de Cozinha</title>
+    <title>Cadastro de Cozinha - ComandaDigital</title>
 </head>
 <body>
     @section('content')
@@ -22,7 +22,7 @@
                     <div class="form-row">               
                         <div class="form-group col-md-5">
                             <label for="codigocozinha">Código</label>
-                            <input type="text" class="form-control @error('codigocozinha') is-invalid @enderror" id="codigocozinha" placeholder="Código">
+                            <input type="text" name="codigocozinha" class="form-control @error('codigocozinha') is-invalid @enderror" id="codigocozinha" placeholder="Código">
                             @error('codigocozinha')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -32,7 +32,7 @@
                     </div>
                     <div class="form-group">
                         <label for="descricaocozinha">Descrição</label>
-                        <textarea class="form-control @error('descricaocozinha') is-invalid @enderror" rows="5" id="descricaocozinha" placeholder="Descrição da cozinha"></textarea>
+                        <textarea name="descricaocozinha" class="form-control @error('descricaocozinha') is-invalid @enderror" rows="5" id="descricaocozinha" placeholder="Descrição da cozinha"></textarea>
                         @error('descricaocozinha')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
