@@ -15,6 +15,7 @@
         <h3 class="text-center">
             <small class="text-muted">Lista de Pedidos</small>
         </h3>
+        
         <table class="table table-bordered table-striped table-responsive-xl shadow-sm p-3 mb-5 bg-white rounded">
             <thead>
                 <tr>
@@ -27,30 +28,17 @@
                 </tr>
             </thead>
             <tbody>
+                @foreach($resultado as $pedido)
                 <tr>
-                <th scope="row">1</th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>{{ $pedido->numero_mesa }}</td>
+                <td>{{ $pedido->nome_cliente }}</td>
+                <td>{{ $pedido->comidas }}</td>
+                <td>{{ $pedido->bebidas }}</td>
+                <td>{{ $pedido->observacoes }}</td>
+                <td>{{ $pedido->status }}</td>
                 </tr>
-                <tr>
-                <th scope="row">2</th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                </tr>
-                <tr>
-                <th scope="row">3</th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                </tr>
+                @endforeach
+                
             </tbody>
         </table>
         <div class="d-flex justify-content-center">

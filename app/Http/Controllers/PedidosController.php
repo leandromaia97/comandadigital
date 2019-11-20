@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Model\Pedidos;
+use Illuminate\Support\Facades\DB;
 
 class PedidosController extends Controller
 {
@@ -14,7 +15,8 @@ class PedidosController extends Controller
      */
     public function index()
     {
-        return view('telas.pedidos');
+        $resultado = $this->mostrarPedido();
+        return view('telas.pedidos', compact('resultado'));
     }
 
     /**
@@ -44,7 +46,6 @@ class PedidosController extends Controller
 
         $pedidos = new Pedidos;
 
-        // dd($request);
         $pedidos->numero_mesa = $request->numeromesa;
         $pedidos->nome_cliente = $request->nomecliente;
         $pedidos->comidas = $request->comidas;
@@ -62,6 +63,15 @@ class PedidosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+     public function mostrarPedido()
+     {
+        $mostrarpedido = DB::table('pedidos')->select('numero_mesa', 'nome_cliente', 'comidas', 'bebidas', 'observacoes', 'status')->get();
+
+        return $mostrarpedido;
+        // dd($mostrarpedido);
+     }
+
     public function show($id)
     {
         //
