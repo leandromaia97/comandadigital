@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Model\Cozinha;
+use Illuminate\Support\Facades\DB;
 
 class CozinhaController extends Controller
 {
@@ -53,6 +55,7 @@ class CozinhaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function show($id)
     {
         //

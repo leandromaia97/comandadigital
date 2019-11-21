@@ -19,7 +19,7 @@ class Pedidos extends Migration
             $table->string('nome_cliente', 255);
             $table->string('comidas', 500);
             $table->string('bebidas', 500);
-            $table->longText('observacoes');
+            $table->longText('observacoes')->nullable();
             $table->string('status', 255);
             $table->timestamps();
         });

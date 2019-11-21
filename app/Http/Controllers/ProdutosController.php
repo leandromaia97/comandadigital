@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Model\Produtos;
+use Illuminate\Support\Facades\DB;
 
 class ProdutosController extends Controller
 {
@@ -13,7 +15,8 @@ class ProdutosController extends Controller
      */
     public function index()
     {
-        return view('telas.produtos');
+        $resultado = $this->mostrarProduto();
+        return view('telas.produtos', compact('resultado'));
     }
 
     /**
@@ -43,13 +46,13 @@ class ProdutosController extends Controller
             'entregaproduto' => 'required',
         ]);
 
-        $produto = new Produto;
-        $produto->codigo = $request->codigoproduto;
+        $produto = new Produtos;
+        $produto->codigo_produto = $request->codigoproduto;
         $produto->nome = $request->nomeproduto;
         $produto->descricao = $request->descricaoproduto;
         $produto->preco = $request->precoproduto;
         $produto->quantidade = $request->quantidadeproduto;
-        $produto->entrega = $request->entregaproduto;
+        $produto->data_entrega = $request->entregaproduto;
         
         $produto->save();
     }
@@ -60,6 +63,15 @@ class ProdutosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+    public function mostrarProduto()
+    {
+       $mostrarproduto = DB::table('produtos')->select('codigo_produto', 'nome', 'descricao', 'preco', 'quantidade', 'data_entrega')->get();
+
+       return $mostrarproduto;
+       // dd($mostrarproduto);
+    }
+
     public function show($id)
     {
         //

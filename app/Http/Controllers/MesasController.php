@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Model\Mesas;
+use Illuminate\Support\Facades\DB;
 
 class MesasController extends Controller
 {
@@ -13,7 +15,8 @@ class MesasController extends Controller
      */
     public function index()
     {
-        return view('telas.mesas');
+        $resultado = $this->mostrarMesa();
+        return view('telas.mesas', compact('resultado'));
     }
 
     /**
@@ -40,13 +43,13 @@ class MesasController extends Controller
             'status' => 'required',
         ]);
 
-        $mesa = new Mesa;
-        $mesa->codigomesa = $request->codigomesa;
-        $mesa->capacidade = $request->capacidade;
-        $mesa->status = $request->status;
-        $mesa->mesasmescladas = $request->mesasmescladas;
+        $mesas = new Mesas;
+        $mesas->codigo_mesa = $request->codigomesa;
+        $mesas->capacidade = $request->capacidade;
+        $mesas->status = $request->status;
+        $mesas->mesas_mescladas = $request->mesasmescladas;
         
-        $mesa->save();
+        $mesas->save();
         
     }
 
@@ -56,6 +59,15 @@ class MesasController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+    public function mostrarMesa()
+    {
+       $mostrarmesa = DB::table('mesas')->select('codigo_mesa', 'capacidade', 'status', 'mesas_mescladas')->get();
+
+       return $mostrarmesa;
+       // dd($mostrarmesa);
+    }
+
     public function show($id)
     {
         //

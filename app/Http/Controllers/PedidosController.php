@@ -54,6 +54,9 @@ class PedidosController extends Controller
         $pedidos->status = 0;
         
         $pedidos->save();
+        //return redirect()
+            //->action('PedidosController@index')
+            //-with('mensagem', 'Pedido cadastrado com sucesso!');
         
     }
 

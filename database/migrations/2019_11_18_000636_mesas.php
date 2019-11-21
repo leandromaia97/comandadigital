@@ -17,7 +17,7 @@ class Mesas extends Migration
             $table->integer('id')->autoIncrement();
             $table->string('codigo_mesa', 255);
             $table->string('capacidade', 255);
-            $table->string('status', 255);
+            $table->string('status', 255)->nullable();
             $table->string('mesas_mescladas', 255);
             $table->timestamps();
         });

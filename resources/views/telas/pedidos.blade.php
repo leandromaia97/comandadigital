@@ -14,31 +14,29 @@
     <div class="container col-md-8">
         <h3 class="text-center">
             <small class="text-muted">Lista de Pedidos</small>
-        </h3>
-        
+        </h3>  
         <table class="table table-bordered table-striped table-responsive-xl shadow-sm p-3 mb-5 bg-white rounded">
             <thead>
                 <tr>
-                <th scope="col">Mesa</th>
-                <th scope="col">Cliente</th>
-                <th scope="col">Comidas</th>
-                <th scope="col">Bebidas</th>
-                <th scope="col">Observações</th>
-                <th scope="col">Status</th>
+                    <th scope="col">Mesa</th>
+                    <th scope="col">Cliente</th>
+                    <th scope="col">Comidas</th>
+                    <th scope="col">Bebidas</th>
+                    <th scope="col">Observações</th>
+                    <th scope="col">Status</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach($resultado as $pedido)
                 <tr>
-                <td>{{ $pedido->numero_mesa }}</td>
-                <td>{{ $pedido->nome_cliente }}</td>
-                <td>{{ $pedido->comidas }}</td>
-                <td>{{ $pedido->bebidas }}</td>
-                <td>{{ $pedido->observacoes }}</td>
-                <td>{{ $pedido->status }}</td>
+                    <td>{{ $pedido->numero_mesa }}</td>
+                    <td>{{ $pedido->nome_cliente }}</td>
+                    <td>{{ $pedido->comidas }}</td>
+                    <td>{{ $pedido->bebidas }}</td>
+                    <td>{{ $pedido->observacoes }}</td>
+                    <td>{{ $pedido->status }}</td>
                 </tr>
-                @endforeach
-                
+                @endforeach             
             </tbody>
         </table>
         <div class="d-flex justify-content-center">

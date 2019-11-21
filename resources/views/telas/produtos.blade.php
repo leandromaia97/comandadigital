@@ -27,30 +27,16 @@
                 </tr>
             </thead>
             <tbody>
+                @foreach($resultado as $produto)
                 <tr>
-                <th scope="row">1</th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                    <td>{{ $produto->codigo_produto }}</td>
+                    <td>{{ $produto->nome }}</td>
+                    <td>{{ $produto->descricao }}</td>
+                    <td>R$ {{ $produto->preco }}</td>
+                    <td>{{ $produto->quantidade }}</td>
+                    <td>{{ $produto->data_entrega }}</td>
                 </tr>
-                <tr>
-                <th scope="row">2</th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                </tr>
-                <tr>
-                <th scope="row">3</th>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                </tr>
+                @endforeach             
             </tbody>
         </table>
         <div class="d-flex justify-content-center">

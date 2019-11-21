@@ -19,7 +19,7 @@ class Garcom extends Migration
             $table->string('nome', 255);
             $table->string('cpf', 20);
             $table->string('rg', 20);
-            $table->string('status', 45);
+            $table->string('status', 45)->nullable();
             $table->timestamps();
         });
     }

@@ -52,7 +52,7 @@
                         <label for="precoproduto">Preço</label>
                         <div class="input-group-prepend">
                             <span class="input-group-text">R$</span>
-                            <input type="text" name="precoproduto" class="form-control @error('precoproduto') is-invalid @enderror col-md-4" id="precoproduto" aria-label="Preço" placeholder="0,00">&nbsp
+                            <input type="number" step="0.01" name="precoproduto" class="form-control @error('precoproduto') is-invalid @enderror col-md-4" id="precoproduto" aria-label="Preço" placeholder="0,00">&nbsp
                             @error('precoproduto')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -72,7 +72,7 @@
                         </div>
                         <div class="form-group col-md-6">
                             <label for="entregaproduto">Data de entrega</label>
-                            <input type="text" name="entregaproduto" class="form-control @error('entregaproduto') is-invalid @enderror" id="entregaproduto" placeholder="DD/MM/AAAA">
+                            <input type="date" name="entregaproduto" class="form-control @error('entregaproduto') is-invalid @enderror" id="entregaproduto" placeholder="DD/MM/AAAA">
                             @error('entregaproduto')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>

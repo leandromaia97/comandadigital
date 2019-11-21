@@ -21,30 +21,18 @@
                 <th scope="col">Código</th>
                 <th scope="col">Capacidade</th>
                 <th scope="col">Status</th>
-                <th scope="col">Mesas mescladas</th>
+                <th scope="col">Mesa mesclada</th>
                 </tr>
             </thead>
             <tbody>
+                @foreach($resultado as $mesa)
                 <tr>
-                <th scope="row">1</th>
-                <td></td>
-                <td></td>
-                <td></td>
+                    <td>{{ $mesa->codigo_mesa }}</td>
+                    <td>{{ $mesa->capacidade }}</td>
+                    <td>{{ $mesa->status }}</td>
+                    <td>{{ $mesa->mesas_mescladas }}</td>
                 </tr>
-
-                <tr>
-                <th scope="row">2</th>
-                <td></td>
-                <td></td>
-                <td></td>
-                </tr>
-
-                <tr>
-                <th scope="row">3</th>
-                <td></td>
-                <td></td>
-                <td></td>
-                </tr>
+                @endforeach             
             </tbody>
         </table>
         <div class="d-flex justify-content-center">
